@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<html>
+{% include 'head.html' %}
+ <body>
+ <table border="2">
+
+       {% for x in student %}
+            <tr>
+           <th>{{ x.classno }}</th>
+           <th>{{ x.file }}</th>
+            </tr>
+ {% endfor %}
+
+ </table>
+    </body>
+ <p><a href="{% url 'slogout' %}">LOGOUT</a> </p>
+</html>

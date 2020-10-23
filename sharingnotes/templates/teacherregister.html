@@ -1,0 +1,15 @@
+{% load staticfiles %}
+<html>
+{% include 'head.html' %}
+ <body>
+        <form action="{% url 'teacherregistersaved' %}" method="post" >
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit">save</button>
+        </form>
+ {{ message }}
+
+    </body>
+</html>

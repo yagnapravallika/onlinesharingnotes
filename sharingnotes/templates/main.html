@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<html>
+<body>
+{% include 'head.html' %}
+<br>
+<table border="0" align="center">
+    <th>
+        <form action="{% url 'teacherlogin' %}" method="post">
+            {% csrf_token %}
+        <table border="0" width="500" height="350">
+            <tr><th colspan="2">TEACHER LOGIN</th></tr>
+            <tr><th>NAME :</th><th><input type="text" name="a"></th></tr>
+            <tr><th>PASSWORD :</th><th><input type="text" name="b"></th></tr>
+            <tr><th colspan="2"><button type="submit" class="btn btn-primary">LOGIN</button> </th></tr>
+            <tr><th colspan="2"><a href="{% url 'teacherregister' %}">REGISTER</a> </th></tr>
+        </table>
+            </form>
+    </th>
+    <th>
+        <form action="{% url 'studentlogin' %}" method="post">
+            {% csrf_token %}
+        <table border="0"  width="500" height="350">
+            <tr><th colspan="2">STUDENT LOGIN</th></tr>
+            <tr><th>NAME :</th><th><input type="text" name="a"></th></tr>
+            <tr><th>PASSWORD :</th><th><input type="text" name="b"></th></tr>
+            <tr><th>CLASS :</th><th><input type="number" name="c"></th></tr>
+            <tr><th colspan="2"><button type="submit" class="btn btn-primary">LOGIN</button> </th></tr>
+            <tr><th colspan="2"><a href="{% url 'studentregister' %}">REGISTER</a> </th></tr>
+        </table>
+            </form>
+    </th>
+</table>
+{#<table border="2">#}
+{#    <tr>#}
+{#        <th><a href="{% url 'wholenotes' %}">FACULTY SHARED NOTES</a> </th>#}
+{#    </tr>#}
+{##}
+{#</table>#}
+</body>
+</html>
